@@ -55,6 +55,31 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=355856500048910&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+   
+ <script>
+    var $_GET = {};
+    urlKiwi='https://pay.kiwify.com.br/OiGy5Xh?afid=oFoaDXX3'
+if(document.location.toString().indexOf('?') !== -1) {
+    var query = document.location
+                   .toString()
+                   // get the query string
+                   .replace(/^.*?\?/, '')
+                   // and remove any existing hash string (thanks, @vrijdenker)
+                   .replace(/#.*$/, '')
+                   .split('&');
+
+    for(var i=0, l=query.length; i<l; i++) {
+       var aux = decodeURIComponent(query[i]).split('=');
+       $_GET[aux[0]] = aux[1];
+    }
+    //get the 'index' query parameter
+urlKiwi='https://pay.kiwify.com.br/OiGy5Xh?afid=oFoaDXX3'+'&utm_source='+$_GET['utm_source']+'&utm_medium='+$_GET['utm_medium']+'&utm_campaign='+$_GET['utm_campaign']+'&utm_content='+$_GET['utm_content']+'&src='+$_GET['src'];
+}
+
+
+
+
+</script>   
     
   </head>
   <body>
@@ -80,7 +105,7 @@ document.getElementById("descounttime").innerHTML =  getNow.getDate() + "/" + ge
 
 </script>
             
-            <link rel="prerender" href="https://pay.kiwify.com.br/OiGy5Xh?afid=4YzBh5P5"/>
+            <link rel="prerender" href="https://pay.kiwify.com.br/OiGy5Xh?afid=oFoaDXX3"/>
             
             <!-- VSL -->
             <div style="padding:56.25% 0 0 0;position:relative;"><iframe frameborder="0" allowfullscreen src="https://scripts.converteai.net/3f9d8a5c-88b6-4e90-8356-c7e4ce1eaaca/players/62e0bb0d1550c7000a4afc1d/embed.html" id="ifr_62e0bb0d1550c7000a4afc1d" style="position:absolute;top:0;left:0;width:100%;height:100%;" referrerpolicy="origin"></iframe></div>
@@ -111,7 +136,7 @@ document.getElementById("descounttime").innerHTML =  getNow.getDate() + "/" + ge
             
             <!-- Botão 1 -->
             <div id="cta1" class="mt-4 d-none">
-              <a href="https://pay.kiwify.com.br/OiGy5Xh?afid=oFoaDXX3" class="a-btn" style="text-decoration: none;">
+              <a id="kiwify1" href="https://pay.kiwify.com.br/OiGy5Xh?afid=oFoaDXX3" class="a-btn" style="text-decoration: none;">
                 <span class="span-btn">QUERO OBTER ACESSO!</span>
                 <span class="span-btn2">(atenção: vagas limitadas)</span>
               </a>
@@ -128,6 +153,10 @@ document.getElementById("descounttime").innerHTML =  getNow.getDate() + "/" + ge
     <script type="text/javascript">
       setTimeout(() => {document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none")}, 1272500); // temporização da Call to Action (em milissegundos)
     </script>
+    
+     document.getElementById("kiwify1").href = urlKiwi;
+
+ document.getElementById("kiwify2").href = urlKiwi;
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
